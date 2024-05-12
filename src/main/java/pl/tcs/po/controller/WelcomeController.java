@@ -6,8 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WelcomeController {
 
-    @GetMapping("/")
-    public String welcome(){
-        return "Welcome to out website";
-    }
+    // When this is uncommented, Vaadin will not work, no idea why
+
+    // @GetMapping("/")
+    // public String welcome(){
+    //     return "Welcome to out website";
+    // }
 }
