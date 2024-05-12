@@ -1,9 +1,11 @@
+HELP.md
+<<<<<<< HEAD
+target/
 
 application.properties
 =======
 
 mvnw
-target/
 *.cmd
 
 # Compiled class file
