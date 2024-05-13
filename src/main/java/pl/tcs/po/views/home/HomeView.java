@@ -10,8 +10,8 @@ import pl.tcs.po.views.MainLayout;
 import pl.tcs.po.views.game.GameView;
 
 @PageTitle("Kahoot v 0.5")
-@Route(value = "", layout = MainLayout.class)
-@RouteAlias(value = "", layout = MainLayout.class)
+@Route(value = "/", layout = MainLayout.class)
+@RouteAlias(value = "/", layout = MainLayout.class)
 public class HomeView extends VerticalLayout {
 
     private String welcomeText = "Welcome to Kahoot v 0.5";
