@@ -1,6 +1,7 @@
 package pl.tcs.po.views;
 
 import pl.tcs.po.views.game.GameView;
+import pl.tcs.po.views.home.HomeView;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.html.Footer;
@@ -49,6 +50,7 @@ public class MainLayout extends AppLayout {
     private SideNav createNavigation() {
         SideNav nav = new SideNav();
 
+        nav.addItem(new SideNavItem("Home", HomeView.class ));
         nav.addItem(new SideNavItem("Game", GameView.class ));
 
         return nav;
