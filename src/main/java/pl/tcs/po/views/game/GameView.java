@@ -1,6 +1,5 @@
 package pl.tcs.po.views.game;
 
-import pl.tcs.po.controller.QuestionController;
 import pl.tcs.po.model.Answers;
 import pl.tcs.po.model.CorrectAnswers;
 import pl.tcs.po.model.QuestionModel;
@@ -14,11 +13,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
-import com.vaadin.flow.component.checkbox.Checkbox;
 import com.vaadin.flow.component.checkbox.CheckboxGroup;
 import com.vaadin.flow.component.checkbox.CheckboxGroupVariant;
 import com.vaadin.flow.component.notification.Notification;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
@@ -28,13 +26,13 @@ import jakarta.annotation.PostConstruct;
 @PageTitle("Kahoot v 0.5")
 @Route(value = "/game", layout = MainLayout.class)
 @RouteAlias(value = "/game", layout = MainLayout.class)
-public class GameView extends HorizontalLayout {
+public class GameView extends VerticalLayout {
 
     private Button submitButton;
     private QuestionModel question;
 
     @Autowired
-    QuestionsClient questionsClient;
+    private QuestionsClient questionsClient;
 
     public GameView() {
     }
@@ -91,7 +89,6 @@ public class GameView extends HorizontalLayout {
         submitButton.addClickShortcut(Key.ENTER);
 
         setMargin(true);
-        setVerticalComponentAlignment(Alignment.END, questionGroup, submitButton);
 
         add(questionGroup, submitButton);
     }
