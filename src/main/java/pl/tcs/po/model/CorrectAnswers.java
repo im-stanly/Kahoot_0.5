@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 @Data
+public
 class CorrectAnswers {
     @JsonProperty("answer_a_correct")
     private boolean answerACorrect;
