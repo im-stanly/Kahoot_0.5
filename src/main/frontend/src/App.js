@@ -8,9 +8,11 @@ const App = () => {
 
     useEffect(() => {
         if (sessionId) {
+            // jak nie ma jeszcze session id to dodajemy sie do jakiegos session
             connect(sessionId, setQuestion);
             return () => disconnect();
         }
+        // jak juz mamy session id to po prostu pobieramy pytanie i wyswietlamy je czyli mamy wypelnic tu zmienna question
     }, [sessionId]);
 
     const handleAnswer = (answer) => {

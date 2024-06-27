@@ -10,6 +10,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @OpenAPIDefinition
 public class SwaggerConfig {
+    // /swagger-ui/index.html
+
     @Bean
     public OpenAPI baseOpenApi(){
         return new OpenAPI().info(new Info().title("Kahoot0_5 - Swagger Docs")
